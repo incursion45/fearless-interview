@@ -75,7 +75,7 @@ export namespace App {
                        return element.socketId == socket.id;
                     })[0];
                     
-                    this.io.emit('disconnected', { playerCount: this.players.length, player:player });
+                    this.io.emit('disconnected', `${player.name} has left`);
                 });
 
                 //send leaderboard to all clients every 2 seconds
