@@ -58,5 +58,10 @@ export namespace App {
             });
         }
 
+        private hitCounter(sessionId : string){
+            let options = {
+                url: `https://api.countapi.xyz/hit/${sessionId}/${this.key}`,
+                method: 'GET',
+                json:true
     }
 }
