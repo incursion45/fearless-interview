@@ -4,4 +4,5 @@ export interface Player {
     icon: string;
     color: string;
     sessionId:string;
+    socketId:string;
 }
