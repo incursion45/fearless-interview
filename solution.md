@@ -9,7 +9,17 @@ For the interview project I created a simple game with multiplayer that will all
 * Must have Node.js version > 15.3
 * Must have npm version > 7.11
 
-##  Installation
+## Configuration
+
+use the JOSN file “” to configure the following settings if you wish the defaults are listed below
+```JSON
+    {
+        "port": 3000,
+        "countApiKey" : "1ccb732e-b55a-4404-ad3f-0f99c02fe44e"
+    }
+```
+
+## Installation
 
 Installation is as easy as running the following command to install and run the application
 

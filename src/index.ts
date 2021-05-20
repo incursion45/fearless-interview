@@ -1,5 +1,7 @@
 import {App} from "./App/Application";
+let config = require('../config.json')
 
-var app = new App.Application(3000, "1ccb732e-b55a-4404-ad3f-0f99c02fe44e");
+
+var app = new App.Application(config.port, config.countApiKey);
 
 app.run();
