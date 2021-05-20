@@ -17,20 +17,24 @@
         <div class="container d-md-flex align-items-stretch">
 
             <div id="content" class="p-4 p-md-5 pt-5">
-                <h2 class="mb-4"><i id="display-icon">&nbsp; </i><span id="display-name"></span> Click The Button!!!!</h2>
-                <p><button id="btnClick" class="btn btn-primary">Click me</button></p>
+                <div id="gamePanel">
+                    <h2 class="mb-4"><i id="display-icon">&nbsp; </i><span id="display-name"></span> Click The
+                        Button!!!!</h2>
+                    <p><button id="btnClick" class="btn btn-primary">Click me</button></p>
+                </div>
+
             </div>
             <nav id="sidebar">
                 <div class="p-4 pt-5">
                     <h5>Leaderboard</h5>
                     <ul id="leaderboard" class="list-unstyled components mb-5">
-                        
+
                     </ul>
                 </div>
             </nav>
         </div><!-- /.container -->
-        <div class="modal fade" id="newPlayerModal" tabindex="-1" role="dialog" aria-labelledby="newPlayerModalLabel"
-            aria-hidden="true">
+        <div class="modal fade" id="newPlayerModal" data-backdrop="static" tabindex="-1" role="dialog"
+            aria-labelledby="newPlayerModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -155,7 +159,7 @@
                         </form>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Watch</button>
+                        <button type="button" class="btn btn-secondary" id="btnWatch">Watch</button>
                         <button type="button" class="btn btn-primary" id="btnStartGame">Start Game</button>
                     </div>
                 </div>

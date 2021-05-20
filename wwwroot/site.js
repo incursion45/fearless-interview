@@ -5,6 +5,12 @@ $(() => {
     //show player settings 
     $('#newPlayerModal').modal('show');
 
+    $('#btnWatch').off('click').on('click', () =>{
+        connect();
+        $('#newPlayerModal').modal('hide');
+        $('#gamePanel').hide();
+    });
+
     //binding icon selector
     $("#player-icon").select2({
         templateResult: formatOption, //custom fomating
@@ -20,7 +26,7 @@ $(() => {
         
     });
 
-    //when color change update the preivew
+    //when color change update the preivew 
     $('#player-color').off("change").on("change", () => {
         let color = $('#player-color').val();
 
@@ -84,6 +90,22 @@ function connectSocket(player) {
         console.log(message);
     });
     
+}
+
+function connect(){
+    window["socket"] = io.connect();
+     //sending leaderboard back so it can be displayed
+     window["socket"].on('leadboard-update', (leadboard) => {
+        updateLeadboard(leadboard);
+    });
+    
+    window["socket"].on('connected', (message) => {
+        console.log(message);
+    });
+
+    window["socket"].on('disconnected', (message) => {
+        console.log(message);
+    });
 }
 
 function formatOption(option) {
